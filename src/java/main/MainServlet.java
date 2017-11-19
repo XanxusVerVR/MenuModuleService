@@ -22,14 +22,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import mysql.authentication.data.ConnectData;
-<<<<<<< HEAD
 import execute.action.Insert;
 import execute.action.Select;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javabean.ServerResponse;
-=======
->>>>>>> 連線隱密資料檔加入忽略3
 
 public class MainServlet extends HttpServlet {
 
