@@ -38,6 +38,7 @@ public class Select {
             int i = 0;
             while (rs.next()) {
                 md[i] = new MealData();
+                md[i].setMealNumber(rs.getInt("mealSerialNumber"));
                 md[i].setMealName(rs.getString("mealName"));
                 md[i].setMealPrice(rs.getInt("mealPrice"));
                 md[i].setMealDescription(rs.getString("mealDescription"));
@@ -81,7 +82,7 @@ public class Select {
         return getMenuJson;
     }
 
-    public int getTotalRow() {
+    public int getTotalRow() {//取得總比數，有多少筆資料
         int size = 0;
         try {
             Class.forName("com.mysql.jdbc.Driver");
