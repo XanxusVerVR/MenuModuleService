@@ -3,22 +3,14 @@ package main;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Statement;
 import execute.action.Delete;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import javabean.ClientInsertMealRequest;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import mysql.authentication.data.ConnectData;
 import execute.action.Insert;
 import execute.action.Select;
 import java.util.logging.Level;
@@ -85,52 +77,6 @@ public class MainServlet extends HttpServlet {
             String menuJson = s.getMenuJson();
             out.print(menuJson);
         }
-//        System.out.println(thisMealName);//印出
-//        System.out.println(thisMealPrice);
-//        System.out.println(thisMealDescription);
-//        System.out.println(thisMealCategory);
-//        System.out.println(thisMealImage);
-
-        
-//        int thisQueryNumber = enums.getQueryNumber();
-//        String thisMealName = enums.getMealData().getMealName();//取出餐點名稱
-//        int thisMealPrice = enums.getMealData().getMealPrice();//取出餐點價格
-//        String thisMealDescription = enums.getMealData().getMealDescription();//取出餐點描述
-//        String thisMealCategory = enums.getMealData().getMealCategory();//取出餐點類型
-//        String thisMealImage = enums.getMealData().getMealImage();//取出餐點圖片
-//        if(thisQueryNumber == 2){
-//            try {
-//            Class.forName("com.mysql.jdbc.Driver");
-//
-//            Connection connect = (Connection) DriverManager.getConnection("jdbc:mysql://" + ConnectData.IP + ":" + ConnectData.PORT + "/" + ConnectData.DB_NAME + "?useUnicode=yes&characterEncoding=UTF-8&"
-//                    + "user=" + ConnectData.USER + "&password=" + ConnectData.PASSWORD + "");
-//            Statement statement = (Statement) connect.createStatement();
-//            statement.executeUpdate("INSERT INTO `menu` ( mealName, mealPrice, mealDescription, mealCategory, mealImage)VALUES( \'" + thisMealName + "\', " + thisMealPrice + ", \'" + thisMealDescription + "\', \'" + thisMealCategory + "\', \'" + thisMealImage + "\')");
-//        } catch (ClassNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (SQLException e) {
-//            //e.printStackTrace();
-//            System.out.println("SQLException: " + e.getMessage());
-//            System.out.println("SQLState: " + e.getSQLState());
-//            System.out.println("VendorError: " + e.getErrorCode());
-//        } finally {
-//            if (out != null) {
-//                out.close();
-//            }
-//        }
-//        }
-        
-
-//        System.out.println(thisMealName);//印出
-//        System.out.println(thisMealPrice);
-//        System.out.println(thisMealDescription);
-//        System.out.println(thisMealCategory);
-//        System.out.println(thisMealImage);
-
-//        System.out.println(ConnectData.DB_NAME);
-//        out.print(payloadRequest);
-
-//        System.out.println(payloadRequest);
     }
 
 }
